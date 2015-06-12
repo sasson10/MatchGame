@@ -14,6 +14,17 @@ function GameObject (object, x, y, width, height) {
     var clickFlag = false;
     var xoffset;
     var yoffset;
+
+    this.setW = function (w){
+        this.width = w;
+        this.right = x+width;
+    }
+
+    this.setH = function (h){
+        this.height = h;
+        this.bottom = y+height;
+    }
+
     this.draw = function(ctx) {
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     };
